@@ -15,7 +15,7 @@ void Bela_userSettings(BelaInitSettings *settings)
 
 bool setup(BelaContext* context, void* userData)
 {
-	hx710.setup(context, kClockPin, kDataPin);
+	hx710.setup(context, kDataPin, kClockPin);
 	return BelaLibpd_setup(context, userData, {});
 }
 
