@@ -24,6 +24,7 @@ void render(BelaContext* context, void* userData)
 	bool dataReady = hx710.process(context);
 	if(dataReady)
 	{
+		rt_printf("C++: %u\n", hx710.getData());
 		libpd_float("hx710", hx710.getData());
 	}
 	BelaLibpd_render(context, userData);
